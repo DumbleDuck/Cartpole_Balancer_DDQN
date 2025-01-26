@@ -6,7 +6,7 @@
 ---
 This project uses double deep Q-learning to train an agent in Cartpole-V1 environment of Open AI's Gym. It takes inspiration from this [paper](https://arxiv.org/abs/1509.06461) by Google DeepMind.
 
-The model consists of a target network that trains the main network by functioning as the TD target. These networks are synced at regular intervals to stabilize training. Furthermore, a replay buffer is used to store the agents experience and break correlation when training the main network.
+The model consists of a target network that trains the main network by functioning as the TD target. These networks are synced at regular intervals to stabilize training. Furthermore, a replay buffer is used to store the agent's experience and break correlation when training the main network.
 
 Given:
 - $Q_{1}$: Main network
@@ -20,11 +20,13 @@ Integrating double Q-learning helps eliminate the problem of overestimation bias
 
 $Y^{DDQN} = r_{t+1} + \gamma \cdot Q_2(s_{t+1}, \arg\max_{a'} Q_1(s_{t+1}, a'))$
  
+
 - `Agent()` class:
 1. `q_net`: the main network i.e online network. ($Q_1$)
 2. `target_net`: the target network. ($Q_2$) 
 3. `sync_net()`: function to sync weights of $Q_1$ and $Q_2$.
 4. `target_vals()` & `q_vals`: functions for forward pass of target and main network. 
+
 
 -  `ReplayBuffer()` class:
 1. `buffer_size`, `n_env`, `device`: size of the replay buffer from which mini batch is sampled, number of parallel environments for sampling experience and the device available for training. 
