@@ -25,7 +25,8 @@ $Y^{DDQN} = r_{t+1} + \gamma \cdot Q_2(s_{t+1}, \arg\max_{a'} Q_1(s_{t+1}, a'))$
 1. `q_net`: the main network i.e online network. ($Q_1$)
 2. `target_net`: the target network. ($Q_2$) 
 3. `sync_net()`: function to sync weights of $Q_1$ and $Q_2$.
-4. `target_vals()` & `q_vals`: functions for forward pass of target and main network. 
+4. `target_vals()` & `q_vals`: functions for forward pass of target and main network.  
+
 
 
 -  `ReplayBuffer()` class:
