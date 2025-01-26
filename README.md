@@ -13,6 +13,7 @@ Given:
 - $Q_{2}$: Target network
 
 $Y_{target} = r_{t+1} + \gamma \cdot \max_{a'} Q_2(s_{t+1}, a')$
+
 $MSL = \mathbb{E}\left[\left(Y - Q_1(s, a)\right)^2\right]$
 
 Integrating double Q-learning helps eliminate the problem of overestimation bias by incorporating randomness.
