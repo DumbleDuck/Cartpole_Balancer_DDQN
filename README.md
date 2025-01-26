@@ -1,7 +1,7 @@
 
 ## Cartpole Balancer using Double Deep Q-Learning
 
-<div align="center"> <img src="media/Cartpole_Balancing.gif" alt="Return plot" /> </div>
+<div align="center"> <img src="Media/Cartpole_Balancing.gif" alt="Return plot" /> </div>
 
 ---
 This project uses double deep Q-learning to train an agent in Cartpole-V1 environment of Open AI's Gym. It takes inspiration from this [paper](https://arxiv.org/abs/1509.06461) by Google DeepMind.
@@ -16,6 +16,7 @@ $Y_{target} = r_{t+1} + \gamma \cdot \max_{a'} Q_2(s_{t+1}, a')$
 $MSL = \mathbb{E}\left[\left(Y - Q_1(s, a)\right)^2\right]$
 
 Integrating double Q-learning helps eliminate the problem of overestimation bias by incorporating randomness. 
+
 $Y^{DDQN}_{target} = r_{t+1} + \gamma \cdot Q_2(s_{t+1}, \arg\max_{a'} Q_1(s_{t+1}, a'))$
  
 - `Agent()` class:
@@ -35,6 +36,6 @@ $Y^{DDQN}_{target} = r_{t+1} + \gamma \cdot Q_2(s_{t+1}, \arg\max_{a'} Q_1(s_{t+
 - `e_greedy_policy()`: samples actions according to e-greedy policy.
 - `hyper`: an easyDict to store hyperparameters.
 ---
-<div align="center"> <img src="media/plot.png" alt="Return plot" /> </div>
+<div align="center"> <img src="Media/plot.png" alt="Return plot" /> </div>
 
 ---
