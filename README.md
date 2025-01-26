@@ -36,6 +36,6 @@ $Y^{DDQN}_{target} = r_{t+1} + \gamma \cdot Q_2(s_{t+1}, \arg\max_{a'} Q_1(s_{t+
 - `e_greedy_policy()`: samples actions according to e-greedy policy.
 - `hyper`: an easyDict to store hyperparameters.
 ---
-<div align="center"> <img src="Media/plot.png" alt="Return plot" /> </div>
+<div align="center"> <img src="Media/Plot.png" alt="Return plot" /> </div>
 
 ---
