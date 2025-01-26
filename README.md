@@ -16,7 +16,8 @@ $Y_{target} = r_{t+1} + \gamma \cdot \max_{a'} Q_2(s_{t+1}, a')$
 
 $MSL = \mathbb{E}\left[\left(Y - Q_1(s, a)\right)^2\right]$
 
-$Y^{DDQN}_{target} = r_{t+1} + \gamma \cdot Q_2(s_{t+1}, \arg\max_{a'} Q_1(s_{t+1}, a'))$
+Integrating double Q-learning helps eliminate the problem of overestimation bias by incorporating randomness.
+$Y^{DDQN}$ _{target} = r_{t+1} + \gamma \cdot Q_2(s_{t+1}, \arg\max_{a'} Q_1(s_{t+1}, a'))$
  
 - `Agent()` class:
 1. `q_net`: the main network i.e online network. ($Q_1$)
